@@ -27,8 +27,8 @@ const charToImageMap = {
   w: require("./assets/w.png"),
   x: require("./assets/x.png"),
   y: require("./assets/y.png"),
-  z: require("./assets/z.png")
-
+  z: require("./assets/z.png"),
+  ' ': require("./assets/spc.png")
 
 };
 
@@ -45,7 +45,7 @@ export default function App() {
     }
 
     return arrayOfChars.map(char => {
-      return <img src={charToImageMap[char]} alt="Letronix" />;
+      return <img src={charToImageMap[char]} alt="Letronix"/>;
     });
   };
 
