@@ -1,2 +1,5 @@
 # letronix-reborn
-letronix!
+letronix text!
+
+
+## [Live demo available](https://nidnogg.github.io/letronix-reborn)
