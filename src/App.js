@@ -7,7 +7,29 @@ const charToImageMap = {
   c: require("./assets/c.png"),
   d: require("./assets/d.png"),
   e: require("./assets/e.png"),
-  f: require("./assets/f.png")
+  f: require("./assets/f.png"),
+  g: require("./assets/g.png"),
+  h: require("./assets/h.png"),
+  i: require("./assets/i.png"),
+  j: require("./assets/j.png"),
+  k: require("./assets/k.png"),
+  l: require("./assets/l.png"),
+  m: require("./assets/m.png"),
+  n: require("./assets/n.png"),
+  o: require("./assets/o.png"),
+  p: require("./assets/p.png"),
+  q: require("./assets/q.png"),
+  r: require("./assets/r.png"),
+  s: require("./assets/s.png"),
+  t: require("./assets/t.png"),
+  u: require("./assets/u.png"),
+  v: require("./assets/v.png"),
+  w: require("./assets/w.png"),
+  x: require("./assets/x.png"),
+  y: require("./assets/y.png"),
+  z: require("./assets/z.png")
+
+
 };
 
 export default function App() {
