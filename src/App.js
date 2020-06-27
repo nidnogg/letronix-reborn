@@ -29,8 +29,17 @@ export default function App() {
 
   return (
     <div className="App">
-      <input value={text} onChange={handleChange} />
-      <div>{updateLetronix()}</div>
+
+      <header>
+        <h3>letronix reborn!</h3>
+        <p> 
+          Digite texto abaixo e receba Letronix:
+        </p>
+      </header>
+      <section className="letronix">
+        <input value={text} onChange={handleChange} />
+        <div className="letronix-output">{updateLetronix()}</div>
+      </section>
     </div>
   );
 }
