@@ -63,8 +63,8 @@ header {
 input {
   background-color: var(--base-color-d1);
   border-style: none;
-  height: 30px;
   width: 200px;
+  height: 30px;
 }
 
 .letronix-output {
@@ -73,11 +73,11 @@ input {
 }
 
 .lowercase {
-  width: 80px;
-  height: auto;
+  width: auto;
+  height: 150px;
 }
 
 .uppercase {
-  height: 180px;
   width: auto;
+  height: 180px;
 }

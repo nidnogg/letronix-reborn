@@ -29,8 +29,8 @@ const charToImageMap = {
   y: require("./assets/y.png"),
   z: require("./assets/z.png"),
   ' ': require("./assets/spc.png")
-
 };
+
 
 export default function App() {
   const [text, setText] = useState("");
@@ -41,19 +41,16 @@ export default function App() {
     const arrayOfChars = [];
 
     for (let i = 0; i < text.length; i++) {
-      arrayOfChars.push(text.charAt(i).toLocaleLowerCase());
+      arrayOfChars.push(text.charAt(i));
     }
 
     return arrayOfChars.map(char => {
-      return <img className="uppercase" src={charToImageMap[char]} alt="Letronix"/>;
+      return <img className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={charToImageMap[char.toLocaleLowerCase()]} alt={char}/>;
     });
-
-
   };
 
   return (
     <div className="App">
-
       <header>
         <h3>letronix reborn!</h3>
         <p> 
