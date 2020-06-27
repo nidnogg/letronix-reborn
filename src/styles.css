@@ -34,8 +34,8 @@ time, mark, audio, video {
 }
 
 body {
-  color: var(--base-color-white);
-  background-color: var(--base-color);
+  color: var(--base-color-d1);
+  background-color: var(--base-color-white);
   font-family: 'Trebuchet MS', sans-serif;
   text-align: center;
 }
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h3 {
   font-size: 120px;
-  color: var(--base-color-s2)
+  color: var(--base-color-d1);
 }
 
 p {

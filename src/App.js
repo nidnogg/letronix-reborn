@@ -2,38 +2,39 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const alphabet = [
-  { char: 'a', variants: 1 },
-  { char: 'b', variants: 1 },
-  { char: 'c', variants: 1 },
-  { char: 'd', variants: 1 },
-  { char: 'e', variants: 1 },
-  { char: 'f', variants: 1 },
-  { char: 'g', variants: 1 },
-  { char: 'h', variants: 1 },
-  { char: 'i', variants: 1 },
-  { char: 'j', variants: 1 },
-  { char: 'k', variants: 1 },
-  { char: 'l', variants: 1 },
-  { char: 'm', variants: 1 },
-  { char: 'n', variants: 1 },
-  { char: 'o', variants: 1 },
-  { char: 'p', variants: 1 },
-  { char: 'q', variants: 1 },
-  { char: 'r', variants: 1 },
-  { char: 's', variants: 1 },
-  { char: 't', variants: 1 },
-  { char: 'u', variants: 1 },
-  { char: 'v', variants: 1 },
-  { char: 'w', variants: 1 },
-  { char: 'x', variants: 1 },
-  { char: 'y', variants: 1 },
-  { char: 'z', variants: 1 }
+  { char: 'a', sourcePath:"./assets/a.png" },
+  { char: 'b', sourcePath:"./assets/b.png" },
+  { char: 'c', sourcePath:"./assets/c.png" },
+  { char: 'd', sourcePath:"./assets/d.png" },
+  { char: 'a', sourcePath:"./assets/a.png" },
+  { char: 'e', sourcePath:"./assets/e.png" },
+  { char: 'f', sourcePath:"./assets/f.png" },
+  { char: 'g', sourcePath:"./assets/g.png" },
+  { char: 'h', sourcePath:"./assets/h.png" },
+  { char: 'i', sourcePath:"./assets/i.png" },
+  { char: 'j', sourcePath:"./assets/j.png" },
+  { char: 'k', sourcePath:"./assets/k.png" },
+  { char: 'l', sourcePath:"./assets/l.png" },
+  { char: 'm', sourcePath:"./assets/m.png" },
+  { char: 'n', sourcePath:"./assets/n.png" },
+  { char: 'o', sourcePath:"./assets/o.png" },
+  { char: 'p', sourcePath:"./assets/p.png" },
+  { char: 'q', sourcePath:"./assets/q.png" },
+  { char: 'r', sourcePath:"./assets/r.png" },
+  { char: 's', sourcePath:"./assets/s.png" },
+  { char: 't', sourcePath:"./assets/t.png" },
+  { char: 'u', sourcePath:"./assets/u.png" },
+  { char: 'v', sourcePath:"./assets/v.png" },
+  { char: 'w', sourcePath:"./assets/w.png" },
+  { char: 'x', sourcePath:"./assets/x.png" },
+  { char: 'y', sourcePath:"./assets/y.png" },
+  { char: 'z', sourcePath:"./assets/z.png" }
 ];
 
 
 const Letter = props => {
-  { sourcePath, variant } = props;
-  return <img src={`sourcePath${variant}.png`}></img>
+  const { sourcePath, variant } = props;
+  return <img src={sourcePath}></img>
 }
 
 /* require sucks ass! fuck require */
