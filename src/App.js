@@ -45,8 +45,10 @@ export default function App() {
     }
 
     return arrayOfChars.map(char => {
-      return <img src={charToImageMap[char]} alt="Letronix"/>;
+      return <img className="uppercase" src={charToImageMap[char]} alt="Letronix"/>;
     });
+
+
   };
 
   return (

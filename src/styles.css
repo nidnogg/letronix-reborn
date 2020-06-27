@@ -71,3 +71,13 @@ input {
   position: relative;
   top: 40px;
 }
+
+.lowercase {
+  width: 80px;
+  height: auto;
+}
+
+.uppercase {
+  width: 160px;
+  height: auto;
+}
