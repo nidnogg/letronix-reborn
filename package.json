@@ -1,30 +1,33 @@
 {
-  "name": "react",
+  "name": "letronix-reborn",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
-  "main": "src/index.js",
-  "dependencies": {
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-scripts": "3.0.1"
-  },
-  "devDependencies": {
-    "typescript": "3.8.3"
-  },
+  "description": "letronix...reborn!",
+  "private": "true",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "parcel public/index.html --port 3000",
+    "build": "parcel build public/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nidnogg/letronix-reborn.git"
+  },
+  "keywords": [
+    "letronix",
+    "reborn"
+  ],
+  "author": "tloriato, nidnogg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nidnogg/letronix-reborn/issues"
+  },
+  "homepage": "https://github.com/Nidnogg/letronix-reborn#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
