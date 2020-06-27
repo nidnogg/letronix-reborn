@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Nidnogg/letronix-reborn/issues"
   },
-  "homepage": "https://nidnogg.github.io/letronix-reborn",
+  "homepage": "https://github.com/Nidnogg/letronix-reborn",
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4"
