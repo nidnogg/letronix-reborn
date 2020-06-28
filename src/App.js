@@ -9,9 +9,6 @@ function importAll(r) {
   return images;
 }
 
-//const images = importAll(require.context('./assets', false, /\.(gif|jpe?g|svg)$/));
-//const images = require('./assets/*.png');
-
 const alphabet = [
   { char: 'a', sourcePaths:["./assets/a.png"] },
   { char: 'b', sourcePaths:["./assets/b.png"] },
@@ -43,24 +40,16 @@ const alphabet = [
 ];
 
 
-const Letter = props => {
-  const { letter } = props;
-  
-  return <img src={images['a.png']}></img>
+const Letronix = props => {
+  // componente retardado do henrique (retardado digo incompleto)
+  /* 
+  if(props.char) == um caractere de espaço, printa images[spc] (space)
+  if(props.char) == um caractere que alphabet(char).hasVariants, printa variant
+  else return abaixo
+  */
+
+  return <img className={props.char == props.char.toLowerCase() ? "lowercase" : "uppercase"} src={images[props.char]}></img>
 }
-
-/* require sucks ass! fuck require */
-// https://stackoverflow.com/questions/30752365/node-js-require-path-stored-in-a-variable
-
-const charToImageMap = {};
-
-alphabet.map((letter) => {
-  charToImageMap[letter.char] = [];
-  for (let i = 0; i < letter.variants; i++) {
-    console.log(`./assets/${letter.char}.png`);
-    charToImageMap[letter.char].push(require(`./assets/${letter.char}.png`))
-  }
-});
 
 export default function App() {
   const [text, setText] = useState("");
@@ -79,29 +68,14 @@ export default function App() {
       userInput.push(text.charAt(i));
     }
   
+
+    
+    
+
     return userInput.map((char, index) => {
-      return <img key={index} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
+      //return <img key={index} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
+      return <Letronix key={index} char={char}></Letronix>
     });
-    /* works 
-    const file_name = 'a';
-
-    return (
-      <div>
-        <img src={images[file_name]} alt="nope.avi"/>
-      </div>
-    );
-
-    */
-    /*
-    for (let i = 0; i < text.length; i++) {
-      arrayOfChars.push(text.charAt(i));
-    }
-
-    return arrayOfChars.map(char => {
-      console.log(charToImageMap);
-      return <img className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={charToImageMap[char]} alt={char} />;
-    });
-    */
   }
 
   return (
