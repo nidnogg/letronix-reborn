@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./styles.css";
 import images from './assets/*.png';
 
-
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-  return images;
-}
 
 const alphabet = [
   { char: 'a', sourcePaths:["./assets/a.png"] },
@@ -41,14 +35,19 @@ const alphabet = [
 
 
 const Letronix = props => {
-  // componente retardado do henrique (retardado digo incompleto)
+  // componente retardado do henrique (retardado digo incompleto - falta a variação de letras)
   /* 
-  if(props.char) == um caractere de espaço, printa images[spc] (space)
-  if(props.char) == um caractere que alphabet(char).hasVariants, printa variant
-  else return abaixo
+  falta tratar hasVariants
   */
+  const letronix = useRef(0);
 
-  return <img className={props.char == props.char.toLowerCase() ? "lowercase" : "uppercase"} src={images[props.char]}></img>
+  const fileName = () => ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) ? '-' : props.char.toLowerCase();
+  const className = () => props.char == props.char.toLowerCase() ? "lowercase" : "uppercase";
+
+  useEffect(() => {
+
+  });
+  return <img className={`${className()}`} src={images[`${fileName()}`]}></img>
 }
 
 export default function App() {
@@ -60,17 +59,11 @@ export default function App() {
     return char;
   };
 
-
-
   const updateLetronix = () => {
     const userInput = [];
     for (let i = 0; i < text.length; i++) {
       userInput.push(text.charAt(i));
     }
-  
-
-    
-    
 
     return userInput.map((char, index) => {
       //return <img key={index} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
