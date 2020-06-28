@@ -28357,12 +28357,16 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/assets/a.png":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/assets/-.png":[function(require,module,exports) {
+module.exports = "/-.1167e325.png";
+},{}],"../src/assets/a.png":[function(require,module,exports) {
 module.exports = "/a.b6ace7cb.png";
 },{}],"../src/assets/b.png":[function(require,module,exports) {
 module.exports = "/b.48fba13d.png";
 },{}],"../src/assets/c.png":[function(require,module,exports) {
 module.exports = "/c.5c1c264c.png";
+},{}],"../src/assets/c1.png":[function(require,module,exports) {
+module.exports = "/c1.f10e672f.png";
 },{}],"../src/assets/d.png":[function(require,module,exports) {
 module.exports = "/d.5378cf70.png";
 },{}],"../src/assets/e.png":[function(require,module,exports) {
@@ -28409,7 +28413,38 @@ module.exports = "/x.7416fc18.png";
 module.exports = "/y.1a935b29.png";
 },{}],"../src/assets/z.png":[function(require,module,exports) {
 module.exports = "/z.c3be2732.png";
-},{}],"../src/App.js":[function(require,module,exports) {
+},{}],"../src/assets/*.png":[function(require,module,exports) {
+module.exports = {
+  "-": require("./-.png"),
+  "a": require("./a.png"),
+  "b": require("./b.png"),
+  "c": require("./c.png"),
+  "c1": require("./c1.png"),
+  "d": require("./d.png"),
+  "e": require("./e.png"),
+  "f": require("./f.png"),
+  "g": require("./g.png"),
+  "h": require("./h.png"),
+  "i": require("./i.png"),
+  "j": require("./j.png"),
+  "k": require("./k.png"),
+  "l": require("./l.png"),
+  "m": require("./m.png"),
+  "n": require("./n.png"),
+  "o": require("./o.png"),
+  "p": require("./p.png"),
+  "q": require("./q.png"),
+  "r": require("./r.png"),
+  "s": require("./s.png"),
+  "t": require("./t.png"),
+  "u": require("./u.png"),
+  "v": require("./v.png"),
+  "w": require("./w.png"),
+  "x": require("./x.png"),
+  "y": require("./y.png"),
+  "z": require("./z.png")
+};
+},{"./-.png":"../src/assets/-.png","./a.png":"../src/assets/a.png","./b.png":"../src/assets/b.png","./c.png":"../src/assets/c.png","./c1.png":"../src/assets/c1.png","./d.png":"../src/assets/d.png","./e.png":"../src/assets/e.png","./f.png":"../src/assets/f.png","./g.png":"../src/assets/g.png","./h.png":"../src/assets/h.png","./i.png":"../src/assets/i.png","./j.png":"../src/assets/j.png","./k.png":"../src/assets/k.png","./l.png":"../src/assets/l.png","./m.png":"../src/assets/m.png","./n.png":"../src/assets/n.png","./o.png":"../src/assets/o.png","./p.png":"../src/assets/p.png","./q.png":"../src/assets/q.png","./r.png":"../src/assets/r.png","./s.png":"../src/assets/s.png","./t.png":"../src/assets/t.png","./u.png":"../src/assets/u.png","./v.png":"../src/assets/v.png","./w.png":"../src/assets/w.png","./x.png":"../src/assets/x.png","./y.png":"../src/assets/y.png","./z.png":"../src/assets/z.png"}],"../src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28420,6 +28455,10 @@ exports.default = App;
 var _react = _interopRequireWildcard(require("react"));
 
 require("./styles.css");
+
+var _ = _interopRequireDefault(require("./assets/*.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -28437,33 +28476,109 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var charToImageMap = {
-  a: require("./assets/a.png"),
-  b: require("./assets/b.png"),
-  c: require("./assets/c.png"),
-  d: require("./assets/d.png"),
-  e: require("./assets/e.png"),
-  f: require("./assets/f.png"),
-  g: require("./assets/g.png"),
-  h: require("./assets/h.png"),
-  i: require("./assets/i.png"),
-  j: require("./assets/j.png"),
-  k: require("./assets/k.png"),
-  l: require("./assets/l.png"),
-  m: require("./assets/m.png"),
-  n: require("./assets/n.png"),
-  o: require("./assets/o.png"),
-  p: require("./assets/p.png"),
-  q: require("./assets/q.png"),
-  r: require("./assets/r.png"),
-  s: require("./assets/s.png"),
-  t: require("./assets/t.png"),
-  u: require("./assets/u.png"),
-  v: require("./assets/v.png"),
-  w: require("./assets/w.png"),
-  x: require("./assets/x.png"),
-  y: require("./assets/y.png"),
-  z: require("./assets/z.png")
+function importAll(r) {
+  var images = {};
+  r.keys().map(function (item, index) {
+    images[item.replace('./', '')] = r(item);
+  });
+  return images;
+}
+
+var alphabet = [{
+  char: 'a',
+  sourcePaths: ["./assets/a.png"]
+}, {
+  char: 'b',
+  sourcePaths: ["./assets/b.png"]
+}, {
+  char: 'c',
+  sourcePaths: ["./assets/c.png", "./assets/c1.png"]
+}, {
+  char: 'd',
+  sourcePaths: ["./assets/d.png"]
+}, {
+  char: 'a',
+  sourcePaths: ["./assets/a.png"]
+}, {
+  char: 'e',
+  sourcePaths: ["./assets/e.png"]
+}, {
+  char: 'f',
+  sourcePaths: ["./assets/f.png"]
+}, {
+  char: 'g',
+  sourcePaths: ["./assets/g.png"]
+}, {
+  char: 'h',
+  sourcePaths: ["./assets/h.png"]
+}, {
+  char: 'i',
+  sourcePaths: ["./assets/i.png"]
+}, {
+  char: 'j',
+  sourcePaths: ["./assets/j.png"]
+}, {
+  char: 'k',
+  sourcePaths: ["./assets/k.png"]
+}, {
+  char: 'l',
+  sourcePaths: ["./assets/l.png"]
+}, {
+  char: 'm',
+  sourcePaths: ["./assets/m.png"]
+}, {
+  char: 'n',
+  sourcePaths: ["./assets/n.png"]
+}, {
+  char: 'o',
+  sourcePaths: ["./assets/o.png"]
+}, {
+  char: 'p',
+  sourcePaths: ["./assets/p.png"]
+}, {
+  char: 'q',
+  sourcePaths: ["./assets/q.png"]
+}, {
+  char: 'r',
+  sourcePaths: ["./assets/r.png"]
+}, {
+  char: 's',
+  sourcePaths: ["./assets/s.png"]
+}, {
+  char: 't',
+  sourcePaths: ["./assets/t.png"]
+}, {
+  char: 'u',
+  sourcePaths: ["./assets/u.png"]
+}, {
+  char: 'v',
+  sourcePaths: ["./assets/v.png"]
+}, {
+  char: 'w',
+  sourcePaths: ["./assets/w.png"]
+}, {
+  char: 'x',
+  sourcePaths: ["./assets/x.png"]
+}, {
+  char: 'y',
+  sourcePaths: ["./assets/y.png"]
+}, {
+  char: 'z',
+  sourcePaths: ["./assets/z.png"]
+}];
+
+var Letronix = function Letronix(props) {
+  // componente retardado do henrique (retardado digo incompleto)
+
+  /* 
+  if(props.char) == um caractere de espaço, printa images[spc] (space)
+  if(props.char) == um caractere que alphabet(char).hasVariants, printa variant
+  else return abaixo
+  */
+  return /*#__PURE__*/_react.default.createElement("img", {
+    className: props.char == props.char.toLowerCase() ? "lowercase" : "uppercase",
+    src: _.default[props.char]
+  });
 };
 
 function App() {
@@ -28477,33 +28592,35 @@ function App() {
     return setText(target.value);
   };
 
+  var getLetterImage = function getLetterImage(char) {
+    return char;
+  };
+
   var updateLetronix = function updateLetronix() {
-    var arrayOfChars = [];
+    var userInput = [];
 
     for (var i = 0; i < text.length; i++) {
-      arrayOfChars.push(text.charAt(i).toLocaleLowerCase());
+      userInput.push(text.charAt(i));
     }
 
-    return arrayOfChars.map(function (char) {
-      return /*#__PURE__*/_react.default.createElement("img", {
-        src: charToImageMap[char],
-        alt: "Letronix"
+    return userInput.map(function (char, index) {
+      //return <img key={index} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
+      return /*#__PURE__*/_react.default.createElement(Letronix, {
+        key: index,
+        char: char
       });
     });
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h3", null, "letronix reborn!"), /*#__PURE__*/_react.default.createElement("p", null, "Digite texto abaixo e receba Letronix:")), /*#__PURE__*/_react.default.createElement("section", {
+  }, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h3", null, "letronix reborn!"), /*#__PURE__*/_react.default.createElement("p", null, "letronix? letronix?!? mano vou te explicar o que \xE9 letronix. letronix \xE9 o caralho, esse projeto nao esta pronto ta ligado entao quem te mandou essa pagina vc tem que mandar tomar no cu ta okay se quiser colaborar ele \xE9 OPEN SORCi. :) e o repositorio tem tipo letronix no nome. mas namoral para de compartilhar essa porra nao ta pronta kkkkk")), /*#__PURE__*/_react.default.createElement("section", {
     className: "letronix"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    value: text,
-    onChange: handleChange
-  }), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "letronix-output"
   }, updateLetronix())));
 }
-},{"react":"../node_modules/react/index.js","./styles.css":"../src/styles.css","./assets/a.png":"../src/assets/a.png","./assets/b.png":"../src/assets/b.png","./assets/c.png":"../src/assets/c.png","./assets/d.png":"../src/assets/d.png","./assets/e.png":"../src/assets/e.png","./assets/f.png":"../src/assets/f.png","./assets/g.png":"../src/assets/g.png","./assets/h.png":"../src/assets/h.png","./assets/i.png":"../src/assets/i.png","./assets/j.png":"../src/assets/j.png","./assets/k.png":"../src/assets/k.png","./assets/l.png":"../src/assets/l.png","./assets/m.png":"../src/assets/m.png","./assets/n.png":"../src/assets/n.png","./assets/o.png":"../src/assets/o.png","./assets/p.png":"../src/assets/p.png","./assets/q.png":"../src/assets/q.png","./assets/r.png":"../src/assets/r.png","./assets/s.png":"../src/assets/s.png","./assets/t.png":"../src/assets/t.png","./assets/u.png":"../src/assets/u.png","./assets/v.png":"../src/assets/v.png","./assets/w.png":"../src/assets/w.png","./assets/x.png":"../src/assets/x.png","./assets/y.png":"../src/assets/y.png","./assets/z.png":"../src/assets/z.png"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./styles.css":"../src/styles.css","./assets/*.png":"../src/assets/*.png"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28516,7 +28633,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var rootElement = document.getElementById("root");
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement(_App.default, null)), rootElement);
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), rootElement);
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App":"../src/App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -28545,7 +28662,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63556" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58654" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
