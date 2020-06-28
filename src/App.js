@@ -41,23 +41,22 @@ const Letronix = props => {
   */
   const letronix = useRef(0);
 
-  const fileName = () => ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) ? '-' : props.char.toLowerCase();
+  const fileName = () => {
+    if ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) {
+      return '-';
+     } else {
+       return props.char.toLowerCase();
+     } 
+  }
   const className = () => props.char == props.char.toLowerCase() ? "lowercase" : "uppercase";
-
-  useEffect(() => {
-
-  });
-  return <img className={`${className()}`} src={images[`${fileName()}`]}></img>
+  
+  return <img className={`${className()}`} src={images[`${fileName()}`]} alt="ops"></img>
 }
 
 export default function App() {
   const [text, setText] = useState("");
 
   const handleChange = ({ target }) => setText(target.value);
-
-  const getLetterImage = (char) => {
-    return char;
-  };
 
   const updateLetronix = () => {
     const userInput = [];
@@ -66,7 +65,6 @@ export default function App() {
     }
 
     return userInput.map((char, index) => {
-      //return <img key={index} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
       return <Letronix key={index} char={char}></Letronix>
     });
   }
