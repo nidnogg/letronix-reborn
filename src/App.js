@@ -77,16 +77,10 @@ export default function App() {
     const userInput = [];
     for (let i = 0; i < text.length; i++) {
       userInput.push(text.charAt(i));
-      console.log(images);
     }
   
-    const letters = userInput.map( (letter) => {
-      <img key={letter} src={images[key]}></img>
-    });
-
-    return userInput.map((char) => {
-      return <img key={char} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
-
+    return userInput.map((char, index) => {
+      return <img key={index} className={char == char.toLowerCase() ? "lowercase" : "uppercase"} src={images[char]} alt={`${char}.png`} />;
     });
     /* works 
     const file_name = 'a';
