@@ -74,6 +74,27 @@ input {
   top: 40px;
 }
 
+.lowercase,
+.uppercase {
+  opacity: 0; /* toggled by CSS! */
+}
+
+.lowercase-enter-active,
+.uppercase-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.lowercase-exit,
+.uppercase-exit {
+  opacity: 1;
+} 
+
+.lowercase-exit-active,
+.uppercase-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+} 
 .lowercase {
   width: auto;
   height: 150px;

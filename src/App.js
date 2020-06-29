@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./styles.css";
+import { CSSTransition } from 'react-transition-group';
 import images from './assets/*.png';
+import "./styles.css";
 
 
 const alphabet = [
@@ -39,7 +40,9 @@ const Letronix = props => {
   /* 
   falta tratar hasVariants
   */
+
   const letronix = useRef(0);
+  const [inProp, setInProp] = useState(false);
 
   const fileName = () => {
     if ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) {
@@ -49,8 +52,13 @@ const Letronix = props => {
      } 
   }
   const className = () => props.char == props.char.toLowerCase() ? "lowercase" : "uppercase";
-  
-  return <img className={`${className()}`} src={images[`${fileName()}`]} alt="ops"></img>
+
+
+  return (
+    <CSSTransition in={inProp} timeout={200} classNames={`${className()}`}>
+      <img ref={letronix} src={images[`${fileName()}`]} alt="ops"></img>
+    </CSSTransition>
+  );
 }
 
 export default function App() {
