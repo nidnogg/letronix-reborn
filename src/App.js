@@ -42,38 +42,46 @@ const Letronix = props => {
   */
 
   const letronix = useRef(0);
-  const [inProp, setInProp] = useState(false);
 
   const fileName = () => {
     if ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) {
       return '-';
-     } else {
-       return props.char.toLowerCase();
-     } 
+    } else {
+      return props.char.toLowerCase();
+    }   
   }
+
   const className = () => props.char == props.char.toLowerCase() ? "lowercase" : "uppercase";
-
-
+ 
   return (
-    <CSSTransition in={inProp} timeout={200} classNames={`${className()}`}>
-      <img ref={letronix} src={images[`${fileName()}`]} alt="ops"></img>
-    </CSSTransition>
+      <img ref={letronix} className={`${className()}`} src={images[`${fileName()}`]} alt="ops"></img>
   );
+
 }
 
 export default function App() {
   const [text, setText] = useState("");
+  const [inProp, setInProp] = useState(false);
 
-  const handleChange = ({ target }) => setText(target.value);
+  const handleChange = ({ target }) => {
+    setInProp(true);
+    setText(target.value);
+  }
 
   const updateLetronix = () => {
     const userInput = [];
+    
     for (let i = 0; i < text.length; i++) {
       userInput.push(text.charAt(i));
     }
-
+    
     return userInput.map((char, index) => {
-      return <Letronix key={index} char={char}></Letronix>
+      const className = () => char == char.toLowerCase() ? "lowercase" : "uppercase";
+      return (
+        <CSSTransition key={index} in={inProp} timeout={200} classNames={`${className()}`}>
+          <Letronix char={char}></Letronix>
+        </CSSTransition>
+      );
     });
   }
 
