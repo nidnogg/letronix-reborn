@@ -1,45 +1,50 @@
 import React, { useEffect, useState, useRef } from "react";
-import { CSSTransition } from 'react-transition-group';
+import { useSpring, animated } from 'react-spring'
 import images from './assets/*.png';
 import "./styles.css";
 
 
-const alphabet = [
-  { char: 'a', sourcePaths:["./assets/a.png"] },
-  { char: 'b', sourcePaths:["./assets/b.png"] },
-  { char: 'c', sourcePaths:["./assets/c.png", "./assets/c1.png"] },
-  { char: 'd', sourcePaths:["./assets/d.png"] },
-  { char: 'a', sourcePaths:["./assets/a.png"] },
-  { char: 'e', sourcePaths:["./assets/e.png"] },
-  { char: 'f', sourcePaths:["./assets/f.png"] },
-  { char: 'g', sourcePaths:["./assets/g.png"] },
-  { char: 'h', sourcePaths:["./assets/h.png"] },
-  { char: 'i', sourcePaths:["./assets/i.png"] },
-  { char: 'j', sourcePaths:["./assets/j.png"] },
-  { char: 'k', sourcePaths:["./assets/k.png"] },
-  { char: 'l', sourcePaths:["./assets/l.png"] },
-  { char: 'm', sourcePaths:["./assets/m.png"] },
-  { char: 'n', sourcePaths:["./assets/n.png"] },
-  { char: 'o', sourcePaths:["./assets/o.png"] },
-  { char: 'p', sourcePaths:["./assets/p.png"] },
-  { char: 'q', sourcePaths:["./assets/q.png"] },
-  { char: 'r', sourcePaths:["./assets/r.png"] },
-  { char: 's', sourcePaths:["./assets/s.png"] },
-  { char: 't', sourcePaths:["./assets/t.png"] },
-  { char: 'u', sourcePaths:["./assets/u.png"] },
-  { char: 'v', sourcePaths:["./assets/v.png"] },
-  { char: 'w', sourcePaths:["./assets/w.png"] },
-  { char: 'x', sourcePaths:["./assets/x.png"] },
-  { char: 'y', sourcePaths:["./assets/y.png"] },
-  { char: 'z', sourcePaths:["./assets/z.png"] }
+const symbols = [
+  { char: '1', hasVariants: false, curVariant: 0},
+  { char: '2', hasVariants: false, curVariant: 0},
+  { char: '3', hasVariants: false, curVariant: 0},
+  { char: '4', hasVariants: false, curVariant: 0},
+  { char: '5', hasVariants: false, curVariant: 0},
+  { char: '6', hasVariants: false, curVariant: 0},
+  { char: '7', hasVariants: false, curVariant: 0},
+  { char: '8', hasVariants: false, curVariant: 0},
+  { char: '9', hasVariants: false, curVariant: 0},
+  { char: '0', hasVariants: false, curVariant: 0},
+  { char: 'a', hasVariants: false, curVariant: 0},
+  { char: 'c', hasVariants: true, curVariant: 0},
+  { char: 'b', hasVariants: false, curVariant: 0},
+  { char: 'ç', hasVariants: false, curVariant: 0},
+  { char: 'd', hasVariants: false, curVariant: 0},
+  { char: 'e', hasVariants: false, curVariant: 0},
+  { char: 'f', hasVariants: false, curVariant: 0},
+  { char: 'g', hasVariants: false, curVariant: 0},
+  { char: 'h', hasVariants: false, curVariant: 0},
+  { char: 'i', hasVariants: false, curVariant: 0},
+  { char: 'j', hasVariants: false, curVariant: 0},
+  { char: 'k', hasVariants: false, curVariant: 0},
+  { char: 'l', hasVariants: false, curVariant: 0},
+  { char: 'm', hasVariants: false, curVariant: 0},
+  { char: 'n', hasVariants: false, curVariant: 0},
+  { char: 'o', hasVariants: false, curVariant: 0},
+  { char: 'p', hasVariants: false, curVariant: 0},
+  { char: 'q', hasVariants: false, curVariant: 0},
+  { char: 'r', hasVariants: false, curVariant: 0},
+  { char: 's', hasVariants: false, curVariant: 0},
+  { char: 't', hasVariants: false, curVariant: 0},
+  { char: 'u', hasVariants: false, curVariant: 0},
+  { char: 'v', hasVariants: false, curVariant: 0},
+  { char: 'w', hasVariants: false, curVariant: 0},
+  { char: 'x', hasVariants: false, curVariant: 0},
+  { char: 'y', hasVariants: false, curVariant: 0},
+  { char: 'z', hasVariants: false, curVariant: 0}
 ];
 
-
 const Letronix = props => {
-  // componente retardado do henrique (retardado digo incompleto - falta a variação de letras)
-  /* 
-  falta tratar hasVariants
-  */
 
   const letronix = useRef(0);
   const [inProp, setInProp] = useState(false);
@@ -48,16 +53,13 @@ const Letronix = props => {
     if ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) {
       return '-';
      } else {
-       return props.char.toLowerCase();
+       return `${props.char.toLowerCase()}0`;
      } 
   }
   const className = () => props.char == props.char.toLowerCase() ? "lowercase" : "uppercase";
 
-
   return (
-    <CSSTransition in={inProp} timeout={200} classNames={`${className()}`}>
-      <img ref={letronix} src={images[`${fileName()}`]} alt="ops"></img>
-    </CSSTransition>
+    <img ref={letronix} className={`${className()}`} src={images[`${fileName()}`]}  alt="ops"></img>
   );
 }
 
@@ -73,7 +75,7 @@ export default function App() {
     }
 
     return userInput.map((char, index) => {
-      return <Letronix key={index} char={char}></Letronix>
+      return <Letronix key={index} char={char} />
     });
   }
 
