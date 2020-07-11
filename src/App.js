@@ -47,7 +47,6 @@ const symbols = [
 const Letronix = props => {
 
   const letronix = useRef(0);
-  const [inProp, setInProp] = useState(false);
 
   const fileName = () => {
     if ((props.char == ' ') || (props.char == '\t') || (props.char == '\n')) {
@@ -56,24 +55,31 @@ const Letronix = props => {
        return `${props.char.toLowerCase()}0`;
      } 
   }
+
   const className = () => props.char == props.char.toLowerCase() ? "lowercase" : "uppercase";
 
   return (
     <img ref={letronix} className={`${className()}`} src={images[`${fileName()}`]}  alt="ops"></img>
   );
+
 }
 
 export default function App() {
   const [text, setText] = useState("");
+  const [inProp, setInProp] = useState(false);
 
-  const handleChange = ({ target }) => setText(target.value);
+  const handleChange = ({ target }) => {
+    setInProp(true);
+    setText(target.value);
+  }
 
   const updateLetronix = () => {
     const userInput = [];
+    
     for (let i = 0; i < text.length; i++) {
       userInput.push(text.charAt(i));
     }
-
+    
     return userInput.map((char, index) => {
       return <Letronix key={index} char={char} />
     });
