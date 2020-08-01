@@ -88,13 +88,15 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <h3>letronix reborn!</h3>
+        <h3></h3>
+        {/*
         <p>
           Digite texto abaixo e receba Letronix:
         </p>
+        */}
       </header>
       <section className="letronix">
-        <input value={text} onChange={handleChange} />
+        <input className="input-position" value={text} onChange={handleChange} />
         <div className="letronix-output">{updateLetronix()}</div>
       </section>
     </div>
