@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useSpring, animated } from 'react-spring'
+import { Spring } from 'react-spring/renderprops'
 import images from './assets/*.png';
 import "./styles.css";
 
@@ -64,6 +64,16 @@ const Letronix = props => {
 
 }
 
+const Credits = () => {
+  return (
+    <Spring
+      from={{opacity: 0}}
+    >
+      
+    </Spring>
+
+  )
+}
 export default function App() {
   const [text, setText] = useState("");
   const [inProp, setInProp] = useState(false);
@@ -97,6 +107,10 @@ export default function App() {
       </header>
       <section className="letronix">
         <input className="input-position" value={text} onChange={handleChange} />
+        <div className="input-position rotate">
+          (use windows + shift + s to print) <br />
+          made with love by many friends of <a className="nidLink" href="https://twitter.com/nidnogg_">nidnogg.</a>
+        </div> 
         <div className="letronix-output">{updateLetronix()}</div>
       </section>
     </div>

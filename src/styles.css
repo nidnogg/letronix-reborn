@@ -78,6 +78,15 @@ input {
   top: 270px;
 }
 
+.rotate {
+  transform: rotate(5deg);
+}
+
+.nidLink {
+  color: var(--base-color-s1);
+  transition: all 0.555ms;
+}
+
 html {
   position: relative;
   height: 100vh;
