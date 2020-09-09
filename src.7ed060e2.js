@@ -30430,20 +30430,20 @@ module.exports = "/g1.9c4401e6.png";
 module.exports = "/h0.6280df01.png";
 },{}],"../src/assets/h1.png":[function(require,module,exports) {
 module.exports = "/h1.9ecbaf6c.png";
-},{}],"../src/assets/i0.png":[function(require,module,exports) {
-module.exports = "/i0.c34a4eec.png";
 },{}],"../src/assets/j0.png":[function(require,module,exports) {
 module.exports = "/j0.e96a46a0.png";
+},{}],"../src/assets/i0.png":[function(require,module,exports) {
+module.exports = "/i0.c34a4eec.png";
 },{}],"../src/assets/k0.png":[function(require,module,exports) {
 module.exports = "/k0.31be2b06.png";
 },{}],"../src/assets/k1.png":[function(require,module,exports) {
 module.exports = "/k1.c31ad2ea.png";
 },{}],"../src/assets/k2.png":[function(require,module,exports) {
 module.exports = "/k2.95c5bd0c.png";
-},{}],"../src/assets/l0.png":[function(require,module,exports) {
-module.exports = "/l0.30979c65.png";
 },{}],"../src/assets/m0.png":[function(require,module,exports) {
 module.exports = "/m0.74641ac3.png";
+},{}],"../src/assets/l0.png":[function(require,module,exports) {
+module.exports = "/l0.30979c65.png";
 },{}],"../src/assets/m1.png":[function(require,module,exports) {
 module.exports = "/m1.f17d77d7.png";
 },{}],"../src/assets/n0.png":[function(require,module,exports) {
@@ -30452,24 +30452,24 @@ module.exports = "/n0.0fdc98dd.png";
 module.exports = "/n1.46435386.png";
 },{}],"../src/assets/o0.png":[function(require,module,exports) {
 module.exports = "/o0.38977311.png";
-},{}],"../src/assets/o2.png":[function(require,module,exports) {
-module.exports = "/o2.e0ddc74f.png";
 },{}],"../src/assets/o1.png":[function(require,module,exports) {
 module.exports = "/o1.bdf2a264.png";
 },{}],"../src/assets/p0.png":[function(require,module,exports) {
 module.exports = "/p0.3e3244c3.png";
-},{}],"../src/assets/q0.png":[function(require,module,exports) {
-module.exports = "/q0.f5f208b0.png";
+},{}],"../src/assets/o2.png":[function(require,module,exports) {
+module.exports = "/o2.e0ddc74f.png";
 },{}],"../src/assets/q1.png":[function(require,module,exports) {
 module.exports = "/q1.f2302361.png";
-},{}],"../src/assets/r0.png":[function(require,module,exports) {
-module.exports = "/r0.dbac5c2c.png";
+},{}],"../src/assets/q0.png":[function(require,module,exports) {
+module.exports = "/q0.f5f208b0.png";
 },{}],"../src/assets/s0.png":[function(require,module,exports) {
 module.exports = "/s0.11b2e805.png";
 },{}],"../src/assets/t0.png":[function(require,module,exports) {
 module.exports = "/t0.815ced2d.png";
 },{}],"../src/assets/u0.png":[function(require,module,exports) {
 module.exports = "/u0.699e1fdc.png";
+},{}],"../src/assets/r0.png":[function(require,module,exports) {
+module.exports = "/r0.dbac5c2c.png";
 },{}],"../src/assets/u1.png":[function(require,module,exports) {
 module.exports = "/u1.e06f1b18.png";
 },{}],"../src/assets/v0.png":[function(require,module,exports) {
@@ -30480,10 +30480,10 @@ module.exports = "/w0.af523301.png";
 module.exports = "/x0.069b1b4f.png";
 },{}],"../src/assets/y0.png":[function(require,module,exports) {
 module.exports = "/y0.ba0a6fca.png";
-},{}],"../src/assets/z0.png":[function(require,module,exports) {
-module.exports = "/z0.16e10894.png";
 },{}],"../src/assets/ç0.png":[function(require,module,exports) {
 module.exports = "/ç0.40ae6fd4.png";
+},{}],"../src/assets/z0.png":[function(require,module,exports) {
+module.exports = "/z0.16e10894.png";
 },{}],"../src/assets/*.png":[function(require,module,exports) {
 module.exports = {
   "10": require("./10.png"),
@@ -30509,35 +30509,35 @@ module.exports = {
   "g1": require("./g1.png"),
   "h0": require("./h0.png"),
   "h1": require("./h1.png"),
-  "i0": require("./i0.png"),
   "j0": require("./j0.png"),
+  "i0": require("./i0.png"),
   "k0": require("./k0.png"),
   "k1": require("./k1.png"),
   "k2": require("./k2.png"),
-  "l0": require("./l0.png"),
   "m0": require("./m0.png"),
+  "l0": require("./l0.png"),
   "m1": require("./m1.png"),
   "n0": require("./n0.png"),
   "n1": require("./n1.png"),
   "o0": require("./o0.png"),
-  "o2": require("./o2.png"),
   "o1": require("./o1.png"),
   "p0": require("./p0.png"),
-  "q0": require("./q0.png"),
+  "o2": require("./o2.png"),
   "q1": require("./q1.png"),
-  "r0": require("./r0.png"),
+  "q0": require("./q0.png"),
   "s0": require("./s0.png"),
   "t0": require("./t0.png"),
   "u0": require("./u0.png"),
+  "r0": require("./r0.png"),
   "u1": require("./u1.png"),
   "v0": require("./v0.png"),
   "w0": require("./w0.png"),
   "x0": require("./x0.png"),
   "y0": require("./y0.png"),
-  "z0": require("./z0.png"),
-  "ç0": require("./ç0.png")
+  "ç0": require("./ç0.png"),
+  "z0": require("./z0.png")
 };
-},{"./-.png":"../src/assets/-.png","./10.png":"../src/assets/10.png","./20.png":"../src/assets/20.png","./30.png":"../src/assets/30.png","./40.png":"../src/assets/40.png","./50.png":"../src/assets/50.png","./60.png":"../src/assets/60.png","./90.png":"../src/assets/90.png","./a0.png":"../src/assets/a0.png","./b0.png":"../src/assets/b0.png","./c0.png":"../src/assets/c0.png","./c1.png":"../src/assets/c1.png","./d0.png":"../src/assets/d0.png","./d1.png":"../src/assets/d1.png","./e0.png":"../src/assets/e0.png","./e1.png":"../src/assets/e1.png","./e2.png":"../src/assets/e2.png","./f0.png":"../src/assets/f0.png","./f1.png":"../src/assets/f1.png","./g0.png":"../src/assets/g0.png","./g1.png":"../src/assets/g1.png","./h0.png":"../src/assets/h0.png","./h1.png":"../src/assets/h1.png","./i0.png":"../src/assets/i0.png","./j0.png":"../src/assets/j0.png","./k0.png":"../src/assets/k0.png","./k1.png":"../src/assets/k1.png","./k2.png":"../src/assets/k2.png","./l0.png":"../src/assets/l0.png","./m0.png":"../src/assets/m0.png","./m1.png":"../src/assets/m1.png","./n0.png":"../src/assets/n0.png","./n1.png":"../src/assets/n1.png","./o0.png":"../src/assets/o0.png","./o2.png":"../src/assets/o2.png","./o1.png":"../src/assets/o1.png","./p0.png":"../src/assets/p0.png","./q0.png":"../src/assets/q0.png","./q1.png":"../src/assets/q1.png","./r0.png":"../src/assets/r0.png","./s0.png":"../src/assets/s0.png","./t0.png":"../src/assets/t0.png","./u0.png":"../src/assets/u0.png","./u1.png":"../src/assets/u1.png","./v0.png":"../src/assets/v0.png","./w0.png":"../src/assets/w0.png","./x0.png":"../src/assets/x0.png","./y0.png":"../src/assets/y0.png","./z0.png":"../src/assets/z0.png","./ç0.png":"../src/assets/ç0.png"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./-.png":"../src/assets/-.png","./10.png":"../src/assets/10.png","./20.png":"../src/assets/20.png","./30.png":"../src/assets/30.png","./40.png":"../src/assets/40.png","./50.png":"../src/assets/50.png","./60.png":"../src/assets/60.png","./90.png":"../src/assets/90.png","./a0.png":"../src/assets/a0.png","./b0.png":"../src/assets/b0.png","./c0.png":"../src/assets/c0.png","./c1.png":"../src/assets/c1.png","./d0.png":"../src/assets/d0.png","./d1.png":"../src/assets/d1.png","./e0.png":"../src/assets/e0.png","./e1.png":"../src/assets/e1.png","./e2.png":"../src/assets/e2.png","./f0.png":"../src/assets/f0.png","./f1.png":"../src/assets/f1.png","./g0.png":"../src/assets/g0.png","./g1.png":"../src/assets/g1.png","./h0.png":"../src/assets/h0.png","./h1.png":"../src/assets/h1.png","./j0.png":"../src/assets/j0.png","./i0.png":"../src/assets/i0.png","./k0.png":"../src/assets/k0.png","./k1.png":"../src/assets/k1.png","./k2.png":"../src/assets/k2.png","./m0.png":"../src/assets/m0.png","./l0.png":"../src/assets/l0.png","./m1.png":"../src/assets/m1.png","./n0.png":"../src/assets/n0.png","./n1.png":"../src/assets/n1.png","./o0.png":"../src/assets/o0.png","./o1.png":"../src/assets/o1.png","./p0.png":"../src/assets/p0.png","./o2.png":"../src/assets/o2.png","./q1.png":"../src/assets/q1.png","./q0.png":"../src/assets/q0.png","./s0.png":"../src/assets/s0.png","./t0.png":"../src/assets/t0.png","./u0.png":"../src/assets/u0.png","./r0.png":"../src/assets/r0.png","./u1.png":"../src/assets/u1.png","./v0.png":"../src/assets/v0.png","./w0.png":"../src/assets/w0.png","./x0.png":"../src/assets/x0.png","./y0.png":"../src/assets/y0.png","./ç0.png":"../src/assets/ç0.png","./z0.png":"../src/assets/z0.png"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -30900,7 +30900,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58835" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58988" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
