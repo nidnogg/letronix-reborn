@@ -35,9 +35,7 @@ time, mark, audio, video {
 
 body {
   color: var(--base-color-d1);
-  /*
   background-color: var(--base-color-white);
-  */
   font-family: 'Trebuchet MS', sans-serif;
   text-align: center;
 }
@@ -60,12 +58,10 @@ p {
 
 header {
   margin-top: 30px;
-  background-color: rgb(245, 232, 222, 0.3);
 }
 
 input {
   background-color: var(--base-color-d1);
-  transform: rotate(5deg);
   color: var(--base-color-white);
   text-align: center;
   border-style: none;
@@ -73,36 +69,9 @@ input {
   height: 30px;
 }
 
-.input-position {
-  position: relative;
-  top: 270px;
-}
-
-.rotate {
-  transform: rotate(5deg);
-}
-
-.nidLink {
-  color: var(--base-color-s1);
-  transition: all 0.555ms;
-}
-
-html {
-  position: relative;
-  height: 100vh;
-  top: 0;
-  background-image: url('https://i.imgur.com/NMcuCtH.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.App {
-  background-color: transparent;
-}
 .letronix-output {
   position: relative;
-  top: 300px;
+  top: 40px;
 }
 
 .lowercase {
