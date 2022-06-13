@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Letronix from "./Letronix";
-import images from './assets/*.png';
 import "./styles.css";
 
 
