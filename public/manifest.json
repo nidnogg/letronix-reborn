@@ -2,7 +2,7 @@
   "name": "mood-drone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "keywords": [],
   "author": "nidnogg",
   "license": "MIT",
