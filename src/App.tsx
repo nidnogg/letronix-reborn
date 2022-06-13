@@ -6,10 +6,11 @@ import "./styles.css";
 export default function App() {
   const [text, setText] = useState("");
 
-  const handleChange = ({ target }: any) => setText(target.value);
+  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => setText(target.value);
 
   const updateLetronix = () => {
     const userInput = [];
+    
     for (let i = 0; i < text.length; i++) {
       userInput.push(text.charAt(i));
     }
