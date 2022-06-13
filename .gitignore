@@ -4,6 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Runtime data
 pids
@@ -35,6 +37,9 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+dist
+dist-ssr
+*.local
 
 # TypeScript v1 declaration files
 typings/
@@ -60,13 +65,17 @@ typings/
 # next.js build output
 .next
 
-# parcel folders
-.cache
-dist
-
 # diff flag tricks diff viewers in every system (git diff, github, Phabricator, Bitbucket, etc) to think that the file is a binary file that should be collapsed. 
 # you can still uncollapse the file if you need to verify the changes.
 package-lock.json -diff
 
-# annoying vscode shit
-.vscode
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

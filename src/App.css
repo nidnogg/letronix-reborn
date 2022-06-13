@@ -1,0 +1,116 @@
+:root {
+  /* palette */
+  --base-color-white: #f5e8de;
+  --base-color-d1: #1b160f;
+  --base-color: #2f2519;
+  --base-color-s1: #4a3f35;
+  --base-color-s2: #fa7d09;
+  --base-color-s3: #ff4301;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font: inherit;
+  font-size: 100%;
+	vertical-align: baseline;
+}
+
+body {
+  color: var(--base-color-d1);
+  /*
+  background-color: var(--base-color-white);
+  */
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', sans-serif;
+}
+
+h3 {
+  font-size: 120px;
+  color: var(--base-color-d1);
+}
+
+p {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.2777em;
+}
+
+header {
+  margin-top: 30px;
+  background-color: rgb(245, 232, 222, 0.3);
+}
+
+input {
+  background-color: var(--base-color-d1);
+  transform: rotate(5deg);
+  color: var(--base-color-white);
+  text-align: center;
+  border-style: none;
+  width: 200px;
+  height: 30px;
+}
+
+.input-position {
+  position: relative;
+  top: 270px;
+}
+
+.rotate {
+  transform: rotate(5deg);
+}
+
+.nidLink {
+  color: var(--base-color-s1);
+  transition: all 0.555ms;
+}
+
+html {
+  position: relative;
+  height: 100vh;
+  top: 0;
+  background-image: url('https://i.imgur.com/NMcuCtH.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.App {
+  background-color: transparent;
+}
+.letronix-output {
+  position: relative;
+  top: 300px;
+}
+
+.lowercase {
+  width: auto;
+  height: 80px;
+}
+
+.uppercase {
+  width: auto;
+  height: 140px;
+}

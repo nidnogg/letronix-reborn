@@ -1,38 +1,21 @@
 {
-  "name": "letronix-reborn",
-  "version": "1.0.0",
-  "description": "letronix...reborn!",
-  "private": "true",
-  "main": "index.js",
+  "name": "letronix-vite",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "dev": "parcel public/index.html --port 3000",
-    "build": "parcel build public/index.html --public-url /letronix-reborn",
-    "deploy": "gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nidnogg/letronix-reborn.git"
-  },
-  "keywords": [
-    "letronix",
-    "reborn"
-  ],
-  "author": "tloriato, nidnogg",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Nidnogg/letronix-reborn/issues"
-  },
-  "homepage": "https://github.com/Nidnogg/letronix-reborn",
-  "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "parcel-bundler": "^1.12.4"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "gsap": "^3.3.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-spring": "^8.0.27",
-    "react-transition-group": "^4.4.1"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
   }
 }
